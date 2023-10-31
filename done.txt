@@ -1,0 +1,12 @@
+make repo on GitHub
+make new local database laravelBlogGLU
+composer create-project laravel/laravel laravelBlogGLU
+.env -> DB_DATABASE=laravelChallengeGLU
+php artisan migrate
+php artisan make:migration create_comments_table
+-> add name, email, comment to the migration
+php artisan migrate
+php artisan make:controller Comment
+php artisan make:model Comment 
+-> add fillable to Comment model
+php artisan serve
